@@ -82,11 +82,30 @@ The frontend includes separate pages for:
 
 ![Catalog Analytics](docs/screenshots/catalog-page.png)
 
+## Example Analysis
+
+The repository includes a public demo example based on a cropped dataset image where the face is removed.
+
+### Sample Input
+
+![Sample Input](docs/demo/sample-input-blazer.jpg)
+
+### Sample Detection Output
+
+![Sample Detection Output](docs/demo/sample-output-blazer.png)
+
+### Sample Predicted Results
+
+- Top predicted tags: `blazer`, `single breasted`, `notched (lapel)`, `shirt (collar)`, `set-in sleeve`, `welt (pocket)`
+- Strong detected elements: `pants`, `sleeve`, `collar`, `pocket`
+- Example summary: `Detected pants and jacket-related structure with blazer, single-breasted construction, notched lapel, shirt collar, sleeves, and pocket details`
+
 ## Project Structure
 
 ```text
 fashion-project-clean/
 ├── docs/
+│   ├── demo/
 │   └── screenshots/
 ├── fashion_frontend/
 ├── fashion_ml_backend/
