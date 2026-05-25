@@ -1,0 +1,42 @@
+{
+  "Dresses": {
+    "params": {
+      "Колір": {
+        "paramid": 1,
+        "values": {}
+      },
+      "Візерунок": {
+        "paramid": 2,
+        "values": {}
+      },
+      "Матеріал": {
+        "paramid": 3,
+        "values": {}
+      },
+      "Тип": {
+        "paramid": 4,
+        "values": {}
+      }
+    }
+  },
+  "Clothing": {
+    "params": {
+      "Колір": {
+        "paramid": 1,
+        "values": {}
+      },
+      "Візерунок": {
+        "paramid": 2,
+        "values": {}
+      },
+      "Матеріал": {
+        "paramid": 3,
+        "values": {}
+      },
+      "Тип": {
+        "paramid": 4,
+        "values": {}
+      }
+    }
+  }
+}

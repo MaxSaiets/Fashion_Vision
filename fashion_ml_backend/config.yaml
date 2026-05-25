@@ -1,0 +1,54 @@
+project:
+  name: "fashion_multilabel_classification"
+  output_dir: "outputs"
+  seed: 42
+
+dataset:
+  mode: "fashionpedia_json"
+  huggingface_id: "detection-datasets/fashionpedia"
+  data_dir: "data"
+  annotations_dir: "data/annotations"
+  images_dir: "data/images"
+  main_apparel_only: true
+  max_samples: null
+
+models:
+  - name: "resnet50"
+    backbone: "resnet50"
+    pretrained: true
+    freeze_backbone_epochs: 2
+  - name: "efficientnet_b0"
+    backbone: "efficientnet_b0"
+    pretrained: true
+    freeze_backbone_epochs: 2
+
+training:
+  batch_size: 32
+  num_epochs: 15
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  use_pos_weight: true
+  use_focal_loss: false
+  focal_gamma: 2.0
+  scheduler: "cosine"
+  min_lr: 0.000001
+  patience: 5
+  min_delta: 0.001
+  plateau_window: 4
+
+augmentation:
+  train:
+    resize: [224, 224]
+    horizontal_flip: 0.5
+    color_jitter:
+      brightness: 0.2
+      contrast: 0.2
+      saturation: 0.2
+    random_rotation: 15
+  val:
+    resize: [224, 224]
+
+metrics:
+  save_every_epoch: true
+  charts_dir: "outputs/charts"
+  log_file: "outputs/training_log.jsonl"
