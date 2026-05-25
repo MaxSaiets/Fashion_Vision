@@ -100,6 +100,33 @@ The repository includes a public demo example based on a cropped dataset image w
 - Strong detected elements: `pants`, `sleeve`, `collar`, `pocket`
 - Example summary: `Detected pants and jacket-related structure with blazer, single-breasted construction, notched lapel, shirt collar, sleeves, and pocket details`
 
+## Diagrams
+
+The repository includes only public-facing diagrams based on a strong demo result.
+
+### Pipeline Diagram
+
+```mermaid
+flowchart LR
+    A["Input image or XML feed"] --> B["Image preprocessing"]
+    B --> C["Attribute classification"]
+    B --> D["Garment element detection"]
+    C --> E["Attribute and detection fusion"]
+    D --> E
+    E --> F["Catalog item synthesis"]
+    F --> G["Draft feed generation"]
+    F --> H["Feed enrichment"]
+    F --> I["Catalog analytics and search"]
+```
+
+### Attribute Confidence
+
+![Attribute Confidence](docs/diagrams/sample-tag-confidence.png)
+
+### Detection Confidence
+
+![Detection Confidence](docs/diagrams/sample-detection-confidence.png)
+
 ## Project Structure
 
 ```text
